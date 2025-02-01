@@ -28,3 +28,8 @@ The idea is to create a full set of scripts that can automate as much as possibl
 The ideal output would be to generate monthly reports with or without suggestions that will help a person spend better in the next month.
 The ideal workflow is to remove as much manual entry and error-checking as possible. 
 As close to real-time is another goal so that the data can be updated weekly or possibly even on a daily basis.
+
+## Current Status
+
+- **Manual Data Acquisition**: The CSV data needs to be manually downloaded from online banking or the banking app. It would be better if we could automate this.
+- **Manual Categorisation**: There is some auto-categorization that happens on the banking app but it still takes time for this to be checked. 
