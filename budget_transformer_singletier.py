@@ -15,8 +15,12 @@ transactions_df = pd.read_csv(csv_file, usecols = columns)
 print(transactions_df)
 
 # Define Aggregate values by category
-category_totals = transactions_df.groupby('Category')['Money Out'].sum()
-print(category_totals)
+category_totals = transactions_df.groupby('Category').agg({
+    'Money In': 'sum',
+    'Money Out': 'sum'
+}).fillna(0)
+category_totals_O = category_totals['Money In'] - category_totals['Money Out']
+print(category_totals_O)
 
 # Define category mapping
 # The left hand side is the category names from the Capitec Export and the right hand side are names for my category system in my spreadsheet
