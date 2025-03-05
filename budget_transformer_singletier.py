@@ -23,7 +23,7 @@ category_totals_O = category_totals['Money In'] - category_totals['Money Out']
 print(category_totals_O)
 
 # Define category mapping
-# The left hand side is the category names from the Capitec Export and the right hand side are names for my category system in my spreadsheet
+# The left hand side is the category names from the bank Export and the right hand side are names for your category system in my spreadsheet
 category_mapping = {
     'Transfer': 'Refunds and paybacks',
     'Interest': 'Side hustle income and interest',
