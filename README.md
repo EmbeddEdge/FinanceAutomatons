@@ -10,11 +10,23 @@ This repository contains a collection of Python scripts designed to automate per
 
 ## Getting Started
 
-To get started with these scripts, follow these steps:
+### Quick demo
 
-1. Clone the repository to your local machine.
-2. Prepare your financial data in a CSV format, following the provided template.
-3. Check the budget tracking spreadsheet to view the updated financial information.
+To see how the scripts work you can use the sample files provided. 
+First check the 'Money Dashboard 2025' spreadsheet file and confirm that the 'Monthly Spending' sheet has no entries.
+Second have a look at the 'SampleBankExport' CSV file and check the numbers and the categories.
+Run the 'budget_transformer.py' script
+Check the spreadsheet again and compare the now filled in 'Monthly Spending' sheet as a summation of the line items from the CSV files.
+
+### How to use this script
+
+To modify this program for your usage
+
+1. Download your own financial data in a CSV format, and modify it to replicate the sample file format
+2. Check the budget tracking spreadsheet to view the updated financial information.
+3. Updated the script to match the file names if you change the names to fit your own files. Still keeping the same format.
+4. Run the script.
+5. Optionally you can check the files manually to verify. 
 
 
 
