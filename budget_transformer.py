@@ -7,8 +7,8 @@ import logging
 #Setup logging
 logging.basicConfig(level=logging.INFO)
 # Define the file paths
-csv_file = 'your_csv_file.csv'
-spreadsheet = 'your_spreadsheet.xlsx'
+csv_file = 'SampleBankExport.csv'
+spreadsheet = 'Money Dashboard 2025.xlsx'
 
 # Check if the CSV file exists
 if not os.path.exists(csv_file):
@@ -46,7 +46,7 @@ try:
 
     # Extract the month and ensure there is no missing or invalid data
     try:
-        first_date = pd.to_datetime(transactions_df.at[30, 'Transaction Date'])
+        first_date = pd.to_datetime(transactions_df.at[3, 'Transaction Date'])
         month = first_date.strftime('%b')
     except KeyError:
         raise KeyError("The 'Transaction Date' column is missing or does not contain enough rows.")
