@@ -46,7 +46,7 @@ try:
 
     # Extract the month and ensure there is no missing or invalid data
     try:
-        first_date = pd.to_datetime(transactions_df.at[10, 'Transaction Date'])
+        first_date = pd.to_datetime(transactions_df.at[30, 'Transaction Date'])
         month = first_date.strftime('%b')
     except KeyError:
         raise KeyError("The 'Transaction Date' column is missing or does not contain enough rows.")
