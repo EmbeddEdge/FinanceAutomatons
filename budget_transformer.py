@@ -4,8 +4,9 @@ from datetime import datetime
 import os
 import logging
 
-#Setup logging
-logging.basicConfig(level=logging.INFO)
+# Setup logging
+logging.basicConfig(level=logging.INFO, filename='budget_transformer.log', format='%(asctime)s - %(levelname)s - %(message)s')
+
 # Define the file paths
 csv_file = 'SampleBankExport.csv'
 spreadsheet = 'Money Dashboard 2025.xlsx'
@@ -46,7 +47,7 @@ try:
 
     # Extract the month and ensure there is no missing or invalid data
     try:
-        first_date = pd.to_datetime(transactions_df.at[3, 'Transaction Date'])
+        first_date = pd.to_datetime(transactions_df.at[30, 'Transaction Date'])
         month = first_date.strftime('%b')
     except KeyError:
         raise KeyError("The 'Transaction Date' column is missing or does not contain enough rows.")
@@ -109,9 +110,18 @@ try:
         'Sport & Hobbies': 'Personal & Entertainment',
         'Gadgets': 'Personal & Entertainment',
         'Software/Games': 'Personal & Entertainment',
+        'Holiday': 'Personal & Entertainment',
+        'Legal Fees': 'Personal & Entertainment',
+        'Pharmacy': 'Personal & Entertainment',
+        'Refunds': 'Refunds and paybacks',
+        'Telephone': 'Communication',
+        'Investments': 'Education',
         'DonationsFN': 'Family',
+        'Other Savings & Investments': 'Professional Investment',
         'Personal Care': 'Personal care',
         'Garden': 'Personal care',
+        'Clothing & Shoes': 'Personal care',
+        'Furniture & Appliances': 'Personal & Entertainment',
         #'': 'Adventures and holidays',
         'Savings': 'Transfers between accounts',
         'Transfer': 'Transfers between accounts',
